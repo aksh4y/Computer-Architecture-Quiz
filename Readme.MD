@@ -29,5 +29,30 @@ define('DB_SERVER', "localhost"); // db server
 ?>
 ```
 
+##Usage
+- [x] Register for quiz
+- [ ] Start the quiz
+- [ ] Finish
+
+> Register at /register.html
+
+![img](src/register.PNG)
+
+- [x] Register for quiz
+- [x] Start the quiz
+- [ ] Finish
+
+> Start the quiz by clicking on start after registration
+
+![img](src/Start.PNG)
+
+- [x] Register for quiz
+- [x] Start the quiz
+- [x] Finish
+
+> At the end of the quiz you will be greeted with the seal of awesomeness
+
+![img](src/finish.PNG)
+
 ##Bugs and Feedback
 For bugs, questions and discussions please use the [Github Issues](https://github.com/aksh4y/IMDb-Rating-Prediction/issues).
