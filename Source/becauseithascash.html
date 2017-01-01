@@ -1,0 +1,101 @@
+<?php session_start(); 
+require_once 'db_connect.php';
+$db=new DB_CONNECT();
+$teamno=$_SESSION['teamno'];
+$level=4;
+$result=mysql_query("UPDATE ca_login SET Level='$level' where TeamNo='$teamno'");
+if(!$result)
+echo "Error:"+$result;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Riddle Me Silly</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+          <div class="icons">
+        <p> Team No:
+        <?php
+        echo $_SESSION['teamno'];
+		?>
+		<br/>
+		Members:
+		<?php
+        echo $_SESSION['members'];
+        ?>
+</div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="register.html">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div class="question">
+      <h2>LEVEL 4</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="images/richboy.png" alt="Nope Not Here!" width="462" height="337">
+      </p>
+      <p>&nbsp;</p>
+      
+      <p>&nbsp;</p>
+      <h1>Why Does Everyone Like The CPU?</h1>
+      <p>&nbsp;</p>
+      <form method="post">
+      <p><span style="font-size: 24px">Answer:</span>
+      <input name="Answer" type="text" required="required" style="margin-left:25px" value="" height="30px"> 
+      </p>
+      <p>&nbsp;</p>
+      <p><BR/>
+        
+        
+        <input type="submit" value="Answer!" style="margin-left:115px">
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      </form>
+           
+                  
+  </div>
+  
+        
+		
+  <!--
+  Hint: Carlos has many friends.
+  -->
+  
+  
+  <div class="mainContent">
+  </div>
+    <br class="clearfloat" />
+    
+    
+</div>
+</div>
+
+<!-- end #container -->
+</body>
+</html>

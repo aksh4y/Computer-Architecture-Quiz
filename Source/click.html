@@ -1,0 +1,100 @@
+<?php session_start(); 
+require_once 'db_connect.php';
+$db=new DB_CONNECT();
+$teamno=$_SESSION['teamno'];
+$level=3;
+$result=mysql_query("UPDATE ca_login SET Level='$level' where TeamNo='$teamno'");
+if(!$result)
+echo "Error:"+$result;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Liar, Liar, One Level Higher</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+          <div class="icons">
+        <p> Team No:
+        <?php
+        echo $_SESSION['teamno'];
+		?>
+		<br/>
+		Members:
+		<?php
+        echo $_SESSION['members'];
+        ?>
+</div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="register.html">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+   
+        
+    
+    <!--
+    Hint: The answer lies on the page itself
+    -->
+    
+    
+    <!-- end #header -->
+  <div class="question">
+      <h2>LEVEL 3</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h3>&nbsp;</h3>
+      <h3>&nbsp;</h3>
+      <h1>All semiconductor memory cells:</h1>
+	  <p>
+      <form action="click.php" method="post">
+	    <input type="radio" name="ans" value="exhibits" />
+	    exhibits that can represent binary 1 0r 0
+    </p>
+    <p>
+      <input type="radio" name="ans" value="ram" />
+      are random access
+      <BR/>
+		   <input type="radio" name="ans" value="write"/>
+		   are capable of being written into (at least once)
+		   <BR/>
+           <input type="radio" name="ans" value="read"/> are capable of being read <BR/>
+    <input type="radio" name="ans" value="volatile"/> are volatile </p>
+    <p>&nbsp;</p>
+	  <p><BR/>
+	    <input type="submit" value="Answer!" style="margin-left:145px">
+    </p>
+    </form>
+  </div>
+  <div class="mainContent"></div>
+    <br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+        <p style="color: #85d4ed"><abbr title="eXtensible HyperText Markup Language">Akshay Sadarangani and Rahul Raja Raman</abbr>        
+<!--VisibleLinks-->
+
+</div>
+    </div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?php session_start(); 
+require_once 'db_connect.php';
+$db=new DB_CONNECT();
+$teamno=$_SESSION['teamno'];
+$level=8;
+$result=mysql_query("UPDATE ca_login SET Level='$level' where TeamNo='$teamno'");
+if(!$result)
+echo "Error:"+$result;?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Missing Pin-Out</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+  <div class="icons">
+        <p> Team No:
+        <?php
+        echo $_SESSION['teamno'];
+		?>
+		<br/>
+		Members:
+		<?php
+        echo $_SESSION['members'];
+        ?>
+</div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="register.html">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+	
+        
+		
+    <!--
+    Hint: You, Me, Us, ?
+    -->
+	
+	
+    <!-- end #header -->
+  <div class="question">
+      <h2>LEVEL 8</h2>
+      <p>&nbsp;</p>
+    <h3>&nbsp;</h3>
+      <h1>The Following Text:</h1>
+      <p>&nbsp;</p>
+    <h3>1) A0-An    </h3>
+	  <h3>2)  D0-Dn <br />
+	    3)  Vcc <br />
+	    4)  Vss<br />
+	    5)  CE  <br />
+    6)  Vpp </h3>
+    <h3>7)  RAS<br />
+      8)  CAS<br />
+      9)  OE
+    </h3>
+    <p>&nbsp;</p>
+    <form action="block.php" method="post">
+      <p><BR/>
+      <input name="Answer" type="text" required="required" style="margin-left:25px" value="" height="30px">
+        <input type="submit" value="Answer!" style="margin-left: 30px;"> 
+      <p>      
+      <p><BR/>  
+      <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+    
+    </form>
+  </div>
+  <div class="mainContent"></div>
+    <br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+        <p style="color: #85d4ed"><abbr title="eXtensible HyperText Markup Language">Akshay Sadarangani and Rahul Raja Raman</abbr>        
+<!--VisibleLinks-->
+
+</div>
+    </div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+</html>

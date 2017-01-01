@@ -1,0 +1,207 @@
+* {
+	margin-top: 0;
+	margin-right: 0px;
+	margin-left: 0;
+	margin-bottom: 0;
+	padding: 0;
+}
+body  {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	background: #121313;
+	color: #949494;
+}
+a {
+	color:#85d4ed;
+	font-size:12px;
+	text-decoration:underline;
+}
+a:hover {
+	color: #FF8600;
+	font-size: 12px;
+	text-decoration: none;
+}
+.logo {
+	color:#85d4ed;
+	font-size:48px;
+	padding:20px 0 0 20px;
+}
+.logo span {
+	color:#c0e440;	
+}
+.author {
+	padding:0 0 20px 20px;
+}
+h1 {
+	color: #c0e440;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 0 0 10px 0;
+}
+h2 {
+	color: #FF5F00;
+	font-size: 48px;
+	font-weight: bold;
+	padding: 70px 0 0 70px;
+}
+h3 {
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	padding-top: 0;
+	padding-right: 0;
+	padding-left: 30px;
+	padding-bottom: 0;
+}
+.mainLogo {	
+	float:left;
+}
+.icons {
+	float:right;
+	color:#85d4ed;
+	font-size:18px;
+	padding:40px 220px 0 0;
+}
+.icons img {
+	border:0;
+}
+#container { 
+	width: 1000px;  
+	margin: 0 auto;
+} 
+.mainContent {
+	padding: 20px 20px;
+	color: #ED4914;
+}
+.headerPic {
+	height:374px;
+	width:1000px;
+	background:url(images/hightech.jpg) no-repeat left top;
+	color:#ffffff;
+	background-size:cover;
+}
+.headerPic p {
+	padding:20px 20px 20px 500px;
+}
+.question {
+height:512px;
+width:1000px;
+float:left;
+margin:0 auto;
+}
+.regSuccess {
+	height:512px;
+	width:1000px;
+	background:url(images/check.png) no-repeat left top;
+	color:#ffffff;
+	background-size:auto;
+	margin-left:200px;
+}
+.regSuccess p {
+	padding:20px 20px 20px 500px;
+}
+.awesomeness {
+	height:512px;
+	width:1000px;
+	background:url(images/The-Official-Seal-of-Awesomeness.jpg) no-repeat left top;
+	color:#ffffff;
+	background-size:auto;
+	margin-left:200px;
+}
+.mainContent li {
+	list-style:none;
+	display:inline;
+	float:left;
+	padding:40px 10px;
+}
+.mainContent li img {
+	border:1px solid #000000;
+}
+.sidebarLeft {
+	float: left;
+	width: 470px;
+	font-size: 16px;
+}
+.sidebarRigth {
+	margin-left:490px;
+	border-left:1px solid #505151;
+	padding:0 0 0 20px;
+}
+.sidebarCenter{
+	width: auto;
+	height: auto;
+	font-size: 24px;
+	color: #c0e440;
+	font-weight: bolder;
+}
+#footer {
+	border-top:1px solid #505151;
+	text-align:center;
+	height:75px;
+	background:url(images/footerBackground.jpg) repeat-x left top;
+	color:#ffffff;
+}
+#footer p {
+	padding:20px 0 0 0;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+/*MAIN MENU*/
+#navcontainer {
+	padding:20px 0 170px 0;
+}
+#navcontainer ul {
+	padding-left: 0;
+	margin-left: 0;
+	background: url(images/menuBackground.jpg) repeat-x left top;
+	color: White;
+	float: left;
+	width: 100%;
+	height:60px;
+}
+#navcontainer ul li { 
+	display: inline;
+	color:#ffffff;
+}
+#navcontainer ul li a {
+	padding:18px 29px 0 30px;
+	background: url(images/menuBackground.jpg) repeat-x left top;
+	color: #ffffff;
+	text-decoration: none;
+	float: left;
+	font-size:24px;
+}
+#navcontainer ul li a:hover {
+	background: url(images/menuActive.jpg) repeat-x left top;
+	color: #fff;
+	height:60px;
+}
+#navcontainer #active a {
+	background: url(images/menuActive.jpg) repeat-x left top;
+	color: #fff;
+	height:60px;
+}
+
+.menuSeparator {
+	height:60px;
+	width:2px;
+	float:left;
+}
+
+.section {
+  float: left;
+  margin: 10px;
+  width: 600px;
+}
+.aside {
+  float: right;
+  margin: 10px;
+  width: 320px;
+}
+
+
+

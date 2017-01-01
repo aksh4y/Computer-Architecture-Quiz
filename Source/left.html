@@ -1,0 +1,88 @@
+<?php session_start(); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5-Star</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script type="text/javascript">
+function yesNo()
+{
+
+}
+</script>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+  <div class="icons">
+        <p> Team No:
+        <?php
+        echo $_SESSION['teamno'];
+		?>
+		<br/>
+		Members:
+		<?php
+        echo $_SESSION['members'];
+        ?>
+</div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="register.html">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+	
+        
+		
+    <!--
+    Hint: It won’t be long before you see it…
+    -->
+	
+	
+    <!-- end #header -->
+  <div class="question">
+
+    <p>&nbsp;</p>
+    <h1>&nbsp;</h1>
+      <h2>RECURSION IS HELL</h2>
+    <p>&nbsp;</p>
+    <form>
+      <p><BR/>
+      <input type="button" value="YES" style="margin-left: 60px;" onclick="location.href='leftorright.html'">
+        <input type="button" value="NO" style="margin-left: 60px;"onclick="location.href='leftorright.html'">
+      <p>      
+      <p><BR/>  
+      <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+    
+    </form>
+  </div>
+  <div class="mainContent"></div>
+    <br class="clearfloat" />
+    <!-- begin #footer -->
+    <div id="footer">
+        <p style="color: #85d4ed"><abbr title="eXtensible HyperText Markup Language">Akshay Sadarangani and Rahul Raja Raman</abbr>        
+<!--VisibleLinks-->
+
+</div>
+</div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+</html>

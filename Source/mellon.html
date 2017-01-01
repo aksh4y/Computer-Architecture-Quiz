@@ -1,0 +1,126 @@
+<?php session_start(); 
+require_once 'db_connect.php';
+$db=new DB_CONNECT();
+$teamno=$_SESSION['teamno'];
+$level=19;
+$result=mysql_query("UPDATE ca_login SET Level='$level' where TeamNo='$teamno'");
+if(!$result)
+echo "Error:"+$result;
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>One Word Answer</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+
+<script type = "text/javascript" >
+  function changeHashOnLoad() {
+ window.location.href += "#";
+ setTimeout("changeHashAgain()", "50"); 
+ }
+
+function changeHashAgain() {
+window.location.href += "1";
+}
+
+var storedHash = window.location.hash;
+ window.setInterval(function () {
+ if (window.location.hash != storedHash) {
+     window.location.hash = storedHash;
+}
+}, 50);
+</script>
+
+</head>
+<body onload="changeHashOnLoad();">
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+        
+  <div class="icons">
+        <p> Team No:
+        <?php
+        echo $_SESSION['teamno'];
+		?>
+		<br/>
+		Members:
+		<?php
+        echo $_SESSION['members'];
+        ?>
+</div>
+<div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="register.html">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div class="question">
+      <h2>LEVEL 19</h2>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h1>If I upgrade to a Core i7-4770k processor, how big a bus should I travel in?</h1>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><img src="images/word.png" alt="Nope Not Here!" width="462" height="337">
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <form action="mellon.php" method="POST">
+      <p><span style="font-size: 24px">Answer:</span>
+      <input name="Answer" type="text" required="required" style="margin-left:25px" value="" height="30px"> 
+      </p>
+      <p>&nbsp;</p>
+      <p><BR/>
+        
+        
+        <input type="submit" value="Answer!" style="margin-left:115px">
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      </form>
+           
+                  
+  </div>
+  
+ 
+        
+		
+  <!--
+  Hint: It pays to know the specs of your hardware.
+  -->
+  
+  
+  <div class="mainContent">
+  </div>
+    <br class="clearfloat" />
+    
+    
+</div>
+</div>
+<!-- end #container -->
+</body>
+</html>

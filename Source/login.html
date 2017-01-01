@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>LOGIN</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- begin #container -->
+<div id="container">
+	<!-- begin #header -->
+    <div id="header">
+    	<div class="mainLogo">
+            <div class="logo">Group 7 CIA</div>
+            
+        </div>
+        <div class="icons">&nbsp;</div>
+        <div id="navcontainer">
+            <ul id="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="rules.html">RULES</a></li>
+                <li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li id="active"><a href="#">REGISTER</a></li>
+				<li class="menuSeparator"><img src="images/menuSeparator.png" alt="" /></li>
+                <li><a href="fame.html">HALL OF FAME</a></li>
+				
+            </ul>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div class="mainContent">
+      <h1>Welcome Back To The Greatest Of All Challenges!<br />
+        <br />
+      Go Ahead Login And Be Smarter This Time:</h1>
+      <form action="login.php" method="post">
+		<p><span style="font-size: 18px">Team Number:</span>
+		  <input name="TeamNo" type="text" autofocus="autofocus" required="required" style="margin-left:25px" value="" height="30px">
+		</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p><br>
+		  <br />
+		  
+		  <input type="submit" value="Continue Challenge!" style="margin-left:145px">
+	    </p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+        
+      </form>
+     
+      <?php
+
+ // starting the session
+ session_start();
+
+
+ if (isset($_POST['submit'])) { 
+ $_SESSION['teamno'] = $_POST['TeamNo'];
+ } 
+?> 
+
+    </div>
+    <div id="footer">
+        <p style="color: #85d4ed"><abbr title="eXtensible HyperText Markup Language">Akshay Sadarangani and Rahul Raja Raman</abbr>        
+<!--VisibleLinks-->
+
+</div>
+    </div>
+    <!-- end #footer -->
+</div>
+<!-- end #container -->
+</body>
+</html>
