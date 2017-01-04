@@ -1,4 +1,5 @@
 #Computer Architecture Quiz
+##Date: 2/2/2014
 **_Activity Type: Online Quiz (of sorts, anyway)_**
 
 The activity will be a hybrid of quiz and treasure hunt similar to “Klueless”, the game hosted every year by IIM. Through the activity, students will be required to navigate through a series of webpages tagged by level numbers that increase as they progress. The game will have a total of 21 levels, at the end of which, the first person to have reached the “finish” line is declared the winner.
